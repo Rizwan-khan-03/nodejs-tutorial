@@ -1,0 +1,21 @@
+core javascript interview
+1) explain this code if catch block will execute
+
+(function(){
+    try {
+
+    } catch (x) {
+        var x=1;
+        var y=2;
+        console.log("c1::",x)
+    }
+         console.log("c2::",x)
+         console.log("c3::",y)
+})() 
+
+Ans..}
+1) first of all try() block need to some code or logic first then it will execut.
+if try() execut it will return output of inside try() block if there is any error it will pass to the cath(error) block
+
+2) if catch() will execute it will return x=1 becaus x is declare globalyy which have value 1 and y =undefined.
+becuse cath block acept one argument only

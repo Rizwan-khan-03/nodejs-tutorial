@@ -1,0 +1,20 @@
+basic git command 
+ ** for push the code to git hub
+ *git status
+1) git add .
+2) git commit -m "commit message"
+3) git push //for ame branch
+4) git push origin (target branch)
+
+
+** for pull code 
+
+5) git  pull // for same branch
+6) git pull  origin (source branch)
+
+
+*** for merged
+
+1) git checkout (target branch) // exp,,, git checkout main
+2) git merge (required branch to merege) exp ,, git merge dev
+3) git push -u origin main

@@ -22,7 +22,6 @@ http.createServer(firstServer).listen(4500)
 const color = require('colors')
 // console.log('hello color'.yellow);
 
-
 // const firstApi = http.createServer((req, res) => {
 //     res.writeHead(200, { 'Content-Type': 'application\jason' });
 //     res.write(JSON.stringify({name:'rizwan',pass:123456}));
