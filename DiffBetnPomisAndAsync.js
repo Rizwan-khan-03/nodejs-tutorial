@@ -34,7 +34,7 @@ const fetchDataWithAsync = async () => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve('Data fetched');
-      }, 2000);
+      }, 3000);
     });
   };
   
