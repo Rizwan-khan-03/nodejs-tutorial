@@ -1,0 +1,54 @@
+1) How Node Js WOrk 
+The call stack is used by JavaScript to keep track of multiple function calls.
+It is like a real stack in data structures where data can be pushed and popped and follows the Last In First Out (LIFO)
+principle. We use call stack for memorizing which function is running right now. 
+
+
+Example: The below example demonstrates the call stack.
+
+ >>   function f1() {
+      console.log('Hi by f1!');
+    }
+      
+    function f2() {
+      f1();
+      console.log('Hi by f2!');
+    }
+      
+    f2();
+>>>
+
+Output:
+
+"Hi by f1!"
+"Hi by f2!"
+
+The steps and illustrations below explain the call stack of the above function.
+
+Step 1: When the code loads in memory, the global execution context gets pushed in the stack.
+
+Step 2: The f2() function gets called, and the execution context of f2() gets pushed into the stack
+
+Step 3: The execution of f2() starts and during its execution, the f1() function gets called inside the f2() function. 
+This causes the execution context of f1() to get pushed in the call stack.
+
+Step 5: When the console.log() method runs, it will print “Hi by f1” and then it will be popped from the stack.
+ The execution context will go back to the function and now there is no lines of code that remains in the f1() function, 
+ and as a result, it will be popped from the call stack.
+
+Step 6: This will similarly happen with the console.log() 
+method that prints the line “Hi by f2” and then finally
+the function f2() would finish and would be pushed off the stack.
+
+
+execution context 
+
+
+
+
+4 execution context, the f1()= console.log('hi f1')
+3 execution context, the f1()
+2 execution context of f2()
+1 global execution context 
+
+
