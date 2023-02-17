@@ -1,0 +1,76 @@
+How to Install and Configure MongoDB in Ubuntu?
+
+Step 1: First you need to update and upgrade your system repository in order to install MongoDB. Type the following command in your terminal and then press Enter.
+
+$ sudo apt update && sudo apt upgrade
+
+////////////////////////////
+
+Step 2: Now, install the MongoDB package using ‘apt’. Type the following command and press Enter.
+
+$ sudo apt install -y mongodb
+
+////////////////////
+
+
+Step 3: Check the service status for MongoDB with the help of following command:
+
+$ sudo systemctl status mongodb
+
+////////////////////////////////
+
+Step 4: Now check if the installation process is done correctly and everything is working fine. Go through the following command:
+
+$ mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+
+the value “1” in ok field indicates that the server is working properly with no errors.
+
+//////////////////////////////////
+
+Step 5:MongoDB service can be checked by using the status command:
+$ sudo systemctl status mongodb
+
+///////////////////////
+
+Step 5 : to start the service we can use :
+sudo systemctl start mongodb
+
+////////////
+
+Step 6 :to stop the service we can use  
+sudo systemctl stop mongodb
+
+
+*********************************************************************************
+*questions.....
+ 
+ 1) what is MongoDB
+
+ Ans.... 
+ - mongodb is NoSQL database.
+ - the data is store in collecion
+
+2) can we connect 2 or multiple database to nodejs
+Ans... yes we con connect 2 or multiple database making seperate co0nnection of each database
+
+3) if u delete any data which is not available in ur data base then error will come or not ?
+
+Ans... no there is no error but it will show deletedCount =0 and acknpwledge =true
+
+4) can we pass body in GET method
+Ans.. No
+ **************************************************************
+ crud peration with mongodb terminal command
+ *** creat data 
+
+ 1) use (desired databas)// use firstDB/practice   / here practice is collection of firstdb
+ 2) db.practice.insertOne({name:'f23',brabd:'samsung',price:14000,category:'mobiles'})
+
+ **** check data
+ db.practice.find()
+
+ ****update data
+ db.practice.updateOne({name:'f23'},{$set:{price:1700}})
+
+ *****delete data
+ db.practice.deleteOne({brand:'apple'})
