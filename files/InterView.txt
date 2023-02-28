@@ -19,3 +19,5 @@ if try() execut it will return output of inside try() block if there is any erro
 
 2) if catch() will execute it will return x=1 becaus x is declare globalyy which have value 1 and y =undefined.
 becuse cath block acept one argument only
+
+
