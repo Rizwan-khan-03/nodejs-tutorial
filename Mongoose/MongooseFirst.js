@@ -6,8 +6,9 @@ const practiceSchema = mongoose.Schema({
     brand: String,
     category: String
 });
+const PracticeModal = mongoose.model("mals", practiceSchema);
 const main = async () => {
-    const PracticeModal = mongoose.model("mals", practiceSchema);
+    // const PracticeModal = mongoose.model("mals", practiceSchema);
     let data = new PracticeModal({
         name: "imax",
         price: 120,
@@ -20,7 +21,7 @@ const main = async () => {
 // main()
 
 const updateIndb = async () => {
-    const PracticeModal = mongoose.model("mals", practiceSchema);
+    // const PracticeModal = mongoose.model("mals", practiceSchema);
 
     let data = await PracticeModal.updateOne(
         { name: 'imax' },
@@ -32,7 +33,7 @@ const updateIndb = async () => {
 // updateIndb();
 
 const deleteIndb = async () => {
-    const PracticeModal = mongoose.model("mals", practiceSchema);
+    // const PracticeModal = mongoose.model("mals", practiceSchema);
 
     let data = await PracticeModal.deleteOne(
         { name: 'imax2' },
@@ -41,7 +42,7 @@ const deleteIndb = async () => {
 }
 // deleteIndb();
 const findIndb = async () => {
-    const PracticeModal = mongoose.model("mals", practiceSchema);
+    // const PracticeModal = mongoose.model("mals", practiceSchema);
     //find all data in DB
     // let data = await PracticeModal.find()
     //find single data in DB
